@@ -1,0 +1,51 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(rgb(87, 211, 241), rgb(6, 64, 190));
+}
+
+.site-header,
+footer {
+  padding: 24px;
+  text-align: center;
+}
+
+.site-header h1 { margin: 0; color: #5dd1ff; text-shadow: 0 2px 6px rgb(2, 17, 151);}
+
+/* THE GRID */
+.gallery {
+  display: grid; /* Enables the use of grids */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* With grid-template-columns, grids are seperated into horizontal columns */ /* auto-fit combined with minmax determines the maximum and minimum size a grid takes up on a page, fr uses up all remaining space on a web page */
+  gap: 16px; /* Creates space between the grids */
+  padding: 24px; /* Determines the spacing of grids from the website border */
+}
+
+.gallery .feature {
+  grid-column: 1 / 3; /* featured photo spans 2 columns */
+  background: radial-gradient(rgb(194, 162, 253), rgb(89, 172, 250));
+}
+
+.photo {
+  margin: 0;
+  border-radius: 8px; 
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(9, 145, 235, 0.993);
+  background: radial-gradient(rgb(162, 242, 253), rgb(89, 250, 242));
+}
+
+.photo img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover; /* Images are cropped appropriately to fit the grid neatly */
+  gap: 16px;
+  display: block;
+  border-radius: 8px;
+}
+
+.photo figcaption {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #3e4c59;
+  text-align: center;
+}
